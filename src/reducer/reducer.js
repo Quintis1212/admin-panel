@@ -8,6 +8,7 @@ function reducer(state = [], action) {
         console.log(data)
       return {activePages:data};
     case "REFRESH":
+      //console.log("refreshed")
         let initRefresh= action.initRefresh 
       return {...state,initRefresh:initRefresh};
       default:

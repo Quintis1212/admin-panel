@@ -82,8 +82,9 @@ export default function AddNewItemPage() {
         description: description,
         gender: gender,
         price: price,
-        type: type,
+        typeClothes: type,
         img: imgUrl,
+        isAdded:false,
         size:clothesSize,
       };
       setImgUrl("");
@@ -93,7 +94,7 @@ export default function AddNewItemPage() {
       setDescription("");
       setBrand("");
       setSize("");
-      imgRef=null;
+      imgRef.current=null;
       axios
         .post("/data.json", data)
         .then((res) => {

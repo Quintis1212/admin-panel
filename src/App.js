@@ -4,7 +4,7 @@ import "./App.css";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/storage";
-import { BrowserRouter as Router, Switch, Route,Redirect, NavLink } from "react-router-dom";
+import { HashRouter as Router, Switch, Route,Redirect, NavLink } from "react-router-dom";
 import ItemList from "./components/ItemList";
 import { useDispatch, useSelector } from "react-redux";
 import objToArray from "./Auxiliar/objToArr";

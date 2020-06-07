@@ -4,7 +4,7 @@ import "./App.css";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/storage";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route,Redirect, NavLink } from "react-router-dom";
 import ItemList from "./components/ItemList";
 import { useDispatch, useSelector } from "react-redux";
 import objToArray from "./Auxiliar/objToArr";
@@ -59,10 +59,10 @@ function App() {
       <Router>
         <ul className="nav-menu">
           <li>
-            <Link to="/create-new-item">Add new item</Link>
+            <NavLink activeClassName="selected" to="/create-new-item">Add new item</NavLink>
           </li>
           <li>
-            <Link to="/active-items">Active items</Link>
+            <NavLink activeClassName="selected" to="/active-items">Active items</NavLink>
           </li>
         </ul>
 
